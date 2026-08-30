@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: customer_order_summary
+    description: "Analytics mart reporting aggregated customer order counts, revenue, and active dates."
+    columns:
+      - name: customer_id
+        description: "Primary key for the customer summary record"
+        data_tests:
+          - unique
+          - not_null

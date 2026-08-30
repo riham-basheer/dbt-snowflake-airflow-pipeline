@@ -1,0 +1,29 @@
+name: 'task2_ecommerce_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'task2_dbt_snowflake'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  task2_ecommerce_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+
+seeds:
+  task2_ecommerce_analytics:
+    +schema: raw_seeds
