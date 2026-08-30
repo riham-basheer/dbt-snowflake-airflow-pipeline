@@ -108,10 +108,3 @@ dbt-snowflake-airflow-pipeline/
   * `task_dbt_seed`: Ingests CSVs into Snowflake.
   * `task_dbt_run`: Compiles and executes transformations in Snowflake.
   * `task_dbt_test`: Runs automated data validation checks.
- 
-  
-
-
-
--
-```
